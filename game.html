@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра "Следы"</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <p class="question-info">Вопрос <span id="current-question">0</span> из 5</p>
+        <p id="question-text">Найдите след этого же животного.</p>
+        <img id="question-image">
+        <p id="message-container" style="display: none;"></p>
+        <div class="answers">
+            <input type="radio" id="answer1" name="answer" value="1">
+            <label for="answer1">
+                <img id="answer1img">
+                <img id="answer1mask" style="width: 230px; height: 230px;">
+            </label>
+            <input type="radio" id="answer2" name="answer" value="2">
+            <label for="answer2">
+                <img id="answer2img">
+                <img id="answer2mask" style="width: 230px; height: 230px;">
+            </label>
+            <input type="radio" id="answer3" name="answer" value="3">
+            <label for="answer3">
+                <img id="answer3img">
+                <img id="answer3mask" style="width: 230px; height: 230px;">
+            </label>
+            <input type="radio" id="answer4" name="answer" value="4">
+            <label for="answer4">
+                <img id="answer4img">
+                <img id="answer4mask" style="width: 230px; height: 230px;">
+            </label>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button left">Завершить игру</button>
+            <div class="button" id="timer" style="cursor: default;">Время:</div>
+            <button type="button" class="button proceed">Следующий вопрос</button>
+        </div>
+    </div>
+</body>
+</html>

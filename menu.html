@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра "Следы"</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Меню игры</h1>
+        <div class="menu-content">
+            <div class="left-column">
+                <div class="level-row" style="background-color: #b4d7af;">
+                    Легкий уровень<button class="button enabled" id="button-easy">Играть</button>
+                </div>
+                <div class="level-row" style="background-color: #fff6c5;">
+                    Средний уровень<button class="button proceed" id="button-medium">Играть</button>
+                </div>
+                <div class="level-row" style="background-color: #fcc8c8;">
+                    Сложный уровень<button class="button proceed" id="button-hard">Играть</button>
+                </div>
+                <div class="level-row">
+                    <span id="username-display"></span>
+                    <span id="max-score"></span>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="right-column-row">
+                    <h2>Список лидеров:</h2>
+                    <ul class="leaderboard"></ul>
+                </div>
+                <button class="button enabled">Выход из аккаунта</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
