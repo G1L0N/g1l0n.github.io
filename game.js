@@ -290,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        window.scrollTo(0, 0);
         messageContainer.textContent = 'Животное: ' + getAnimalName(rightAnswer.split('/').pop().split('.')[0]);
         messageContainer.style.display = 'block';
         nextButton.disabled = true;
