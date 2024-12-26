@@ -81,13 +81,13 @@ function endGame(isTimerEnded) {
         case 'easy':{
             document.querySelector('.question-info').textContent += 'Вы ответили правильно на ' + Score / 10 + ' из 5 вопросов.';
             document.querySelector('#question-text').textContent = 'Вы набрали ' + Score + ' баллов - один правильный ответ на лёгком уровне даёт 10 баллов.';
-            if (Score > 40) document.querySelector('#question-text').textContent += ' Так как вы набрали более 40 баллов, вам разблокирован средний уровень!';
+            if (Score >= 40) document.querySelector('#question-text').textContent += ' Так как вы набрали более 30 баллов, вам разблокирован средний уровень!';
             break;
         }
         case 'medium': {
             document.querySelector('.question-info').textContent += 'Вы ответили правильно на ' + Score / 15 + ' из 5 вопросов.';
             document.querySelector('#question-text').textContent = 'Вы набрали ' + Score + ' баллов - один правильный ответ на среднем уровне даёт 15 баллов.';
-            if (Score > 60) document.querySelector('#question-text').textContent += ' Так как вы набрали более 60 баллов, вам разблокирован сложный уровень!';
+            if (Score >= 60) document.querySelector('#question-text').textContent += ' Так как вы набрали более 50 баллов, вам разблокирован сложный уровень!';
             break;
         }
         case 'hard':{
@@ -99,8 +99,8 @@ function endGame(isTimerEnded) {
 
     if (Score > userData.maxScore) {
         userData.maxScore = Score;
-        if (Score > 40 && username !== 'Аноним') {
-            if (Score > 60) {
+        if (Score >= 40 && username !== 'Аноним') {
+            if (Score >= 60) {
             userData.maxDifficulty = 'hard';
             } else {
             userData.maxDifficulty = 'medium';
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         label.addEventListener('dblclick', () => {
             const maskElement = document.getElementById(label.getAttribute('for') + 'mask');
             let currentOpacity = parseFloat(window.getComputedStyle(maskElement).opacity);
-            const newOpacity = Math.max(currentOpacity - 0.015, 0);
+            const newOpacity = Math.max(currentOpacity - 0.03, 0);
             maskElement.style.opacity = newOpacity;
         });
     });

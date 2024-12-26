@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.querySelector('.button.proceed');
     const anonymousButton = document.querySelector('.button.left');
     submitButton.disabled = true;
+    input.focus();
     
     input.addEventListener('input', () => {
         if (input.value.trim() === '') {

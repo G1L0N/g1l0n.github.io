@@ -12,6 +12,13 @@ function updateLeaderboard() {
         }
     }
 
+    if (allPlayers.length == 0) {
+        const h3 = document.createElement('h3');
+        h3.textContent = `Лидеров пока нет...`;
+        leaderboard.appendChild(h3);
+        return null;
+    }
+
     allPlayers.sort((a, b) => b.maxScore - a.maxScore);
 
     allPlayers.slice(0, 5).forEach((player, index) => {
